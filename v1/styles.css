@@ -1,0 +1,355 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFDD0; /* Light cream background */
+    color: #333;
+}
+
+/* Opening Page Styles */
+#opening-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+#opening-page .centered {
+    max-width: 600px;
+}
+
+#opening-page .opening-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    
+}
+
+#opening-page h1 {
+    margin-top: 0; /* Adjust margin as needed */
+}
+
+#opening-page button {
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#opening-page button:hover {
+    background-color: #FFC107;
+}
+
+/* Hide main content initially */
+.hidden {
+    display: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    max-height: 80px;
+    margin-right: 1rem; /* Add margin to separate logo and text */
+}
+
+header .text {
+    margin: 0; /* Remove default margin */
+    padding-left: 1rem; /* Adjust padding if necessary */
+    font-size: 1.5rem; /* Adjust font size */
+    text-align: left; /* Ensure text is aligned left */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end; /* Align nav items to the right */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #FFD700;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Match theme color */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: white; /* Text color white to match theme */
+}
+
+.dropdown-content button {
+    background-color: #333; /* Match theme color */
+    color: white; /* Text color white to match theme */
+    border: none; /* Remove borders */
+    width: 100%; /* Full width */
+    padding: 12px 16px; /* Adjust padding */
+    text-align: left; /* Align text to the left */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.dropdown-content button:hover {
+    background-color: #FFD700; /* Hover color to match theme */
+    color: #333; /* Text color on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Burger menu */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('images/home-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+#about {
+    background-color: #f9f9f9;
+}
+
+#programs .programs-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#programs .program {
+    max-width: 30%;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#programs .program img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#gallery .gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#gallery .gallery-container img {
+    width: 30%;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+#team .team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#team .team-member {
+    max-width: 30%;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#team .team-member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact form button {
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Slider Styles */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100vh;
+}
+
+.slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}

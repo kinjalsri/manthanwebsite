@@ -1,0 +1,177 @@
+<!DOCTYPE html> <!-- why do we have two index pages? -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manthan Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen">
+    <div id="opening-page" class="flex flex-col items-center justify-center h-screen">
+        <div class="text-center">
+            <img src="images/ManthanFoundation.png" alt="Manthan Foundation" class="opening-image mx-auto">
+            <h1>Manthan Foundation</h1>
+            <p>Empowering women through education and support.</p>
+            <button id="enter-site" class="mt-4 px-6 py-2 bg-yellow-500 text-gray-900 rounded-full">Enter Site</button>
+        </div>
+    </div>
+    <div id="main-content" class="hidden">
+        <header>
+            <div class="logo">
+                <img src="images/ManthanFoundation.png" alt="Manthan Foundation Logo">
+            </div>
+            <h1 class="text">Manthan Foundation</h1> <!-- Move this line here -->
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#programs">Programs</a>
+                        <div class="dropdown-content">
+                            <button onclick="window.location.href='programs.html#kalamanthan'">Kalamanthan</button>
+                            <button onclick="window.location.href='programs.html#aao-kahani-baatein'">Aao Kahani Baatein</button>
+                            <button onclick="window.location.href='programs.html#project-saath'">Project Saath</button>
+                        </div>
+                    </li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </header>
+        
+
+        <section id="home">
+            <div class="hero">
+                <div class="overlay"></div>
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide"><img src="image1.jpg" alt="Image 1"></div>
+                        <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
+                        <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+                    </div>
+                    <div class="navigation">
+                        <label for="slide1" class="nav-button"></label>
+                        <label for="slide2" class="nav-button"></label>
+                        <label for="slide3" class="nav-button"></label>
+                    </div>
+                </div>
+                <h1>Welcome to Manthan Foundation</h1>
+                <p>Empowering women through education and support.</p>
+            </div>
+        </section>  
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Manthan Foundation is dedicated to empowering women and promoting education for all. We believe in creating opportunities and providing the necessary support to help individuals reach their full potential.</p>
+        </section>
+
+        <section id="programs">
+            <h2>Our Programs</h2>
+            <div class="programs-container">
+                <div class="program">
+                    <img src="images/program1.jpg" alt="Education for Girls">
+                    <h3>Education for Girls</h3>
+                    <p>Providing educational resources and support to girls in underprivileged communities.</p>
+                </div>
+                <div class="program">
+                    <img src="images/program2.jpg" alt="Women Empowerment Workshops">
+                    <h3>Women Empowerment Workshops</h3>
+                    <p>Organizing workshops and seminars to empower women with skills and knowledge.</p>
+                </div>
+                <div class="program">
+                    <img src="images/program3.jpg" alt="Community Support">
+                    <h3>Community Support</h3>
+                    <p>Offering community support programs to help women achieve financial independence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <img src="images/gallery1.jpg" alt="Gallery Image 1">
+                <img src="images/gallery2.jpg" alt="Gallery Image 2">
+                <img src="images/gallery3.jpg" alt="Gallery Image 3">
+            </div>
+        </section>
+
+        <section class="bg-white dark:bg-gray-900">
+            <div class="container px-6 py-8 mx-auto">
+                <h2 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Our Team</h2>
+        
+                <div class="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <div class="w-full max-w-xs text-center">
+                        <img class="object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=739&q=80" alt="avatar" />
+        
+                        <div class="mt-2">
+                            <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Ahmed Omer</h3>
+                            <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">CEO</span>
+                        </div>
+                    </div>
+        
+                    <div class="w-full max-w-xs text-center">
+                        <img class="object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1516756587022-7891ad56a8cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="avatar" />
+        
+                        <div class="mt-2">
+                            <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Jane Doe</h3>
+                            <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">Co-founder</span>
+                        </div>
+                    </div>
+        
+                    <div class="w-full max-w-xs text-center">
+                        <img class="object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80" alt="avatar" />
+        
+                        <div class="mt-2">
+                            <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Steve Ben</h3>
+                            <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">UI/UX</span>
+                        </div>
+                    </div>
+        
+                    <div class="w-full max-w-xs text-center">
+                        <img class="object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="avatar" />
+        
+                        <div class="mt-2">
+                            <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Patterson Johnson</h3>
+                            <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">Software Engineer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="contact.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Manthan Foundation. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

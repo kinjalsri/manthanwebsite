@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manthan Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="text-white flex flex-col items-center justify-center min-h-screen">
+    <div id="opening-page" class="flex flex-col items-center justify-center h-screen">
+        <div class="text-center">
+            <img src="images/ManthanFoundation.png" alt="Manthan Foundation" class="opening-image mx-auto">
+            <h1><b>Manthan Foundation</b></h1>
+            <p>Empowering women through education and support.</p>
+            <button id="enter-site" class="mt-4 px-6 py-2 bg-yellow-500 text-gray-900 rounded-full">Enter Site</button>
+        </div>
+    </div>
+    <div id="main-content" class="hidden">
+        <header>
+            <div class="logo">
+                <img src="images/ManthanFoundation.png" alt="Manthan Foundation Logo">
+            </div>
+            <h1 class="text">Manthan Foundation</h1> <!-- Move this line here -->
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#programs">Programs</a>
+                        <div class="dropdown-content">
+                            <button onclick="window.location.href='programs.html#kalamanthan'">Kalamanthan</button>
+                            <button onclick="window.location.href='programs.html#aao-kahani-baatein'">Aao Kahani Baatein</button>
+                            <button onclick="window.location.href='programs.html#project-saath'">Project Saath</button>
+                        </div>
+                    </li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </header>
+        <div class="panel"> 
+                        <div id="image-carousel" class="splide" aria-label="Beautiful Images">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="images/slide1.jpg" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="images/slide2.jpg" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="images/slide3.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="home1" id="home">
+                <div class="hero noselect">
+                    <h1><b>Welcome to Manthan Foundation</b></h1><br>
+                    <p>Empowering women through education and support.</p>
+                </div>
+            </div>  
+        </div>
+        <!-- Replace the existing about section with this: -->
+        <section id="about">
+            <h2 class="about-title">About Us</h2>
+            <div class="about-content">
+                <p>
+                    <span class="highlight">Manthan Foundation</span> is a registered entity working diligently for the last 
+                    <span class="highlight">5 years</span> in the field of <span class="highlight">literary art, education, 
+                    and empowerment</span>. We believe in providing a platform to <span class="highlight">raise the right voices at the right time</span>, 
+                    fostering meaningful change in society.
+                </p>
+                <p>
+                    Change is possible only through <span class="highlight">collective efforts</span>, and we actively seek 
+                    <span class="highlight">participation and collaboration</span> with like-minded individuals and organizations.
+                </p>
+                <p>
+                    Join us in creating an <span class="highlight">ecology of change</span>, where every contribution makes 
+                    the world a better place for future generations.
+                </p>
+                <p>
+                    Here is a <span class="highlight">tiny glimpse</span> of the work done by <span class="highlight">Manthan Foundation</span>.
+                </p>
+            </div>
+        </section>
+        
+        
+    
+        <section id="programs" class="container mx-auto px-4 py-16">
+            <h2 class="text-white text-4xl font-bold text-center mb-12">Our Programs</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Kalamanthan -->
+                <div x-data="{ 
+                    currentSlide: 0, 
+                    totalSlides: 3,
+                    nextSlide() { this.currentSlide = (this.currentSlide + 1) % this.totalSlides; },
+                    prevSlide() { this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides; }
+                }" class="bg-gray-800 rounded-lg p-6 text-center">
+                    <h3 class="text-2xl font-bold text-white mb-4">Kalamanthan</h3>
+                    <div class="relative overflow-hidden mb-4 h-64">
+                        <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${currentSlide * 100}%)`">
+                            <img src="Photos/Kalamanthan/15.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Kalamanthan 1">
+                            <img src="Photos/Kalamanthan/334045953_710011173944029_5501110876082577001_n.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Kalamanthan 2">
+                            <img src="Photos/Kalamanthan/342456007_905579690698620_1416499776654649245_n.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Kalamanthan 3">
+                        </div>
+                        <button @click="prevSlide" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">&#10094;</button>
+                        <button @click="nextSlide" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">&#10095;</button>
+                    </div>
+                    <p class="text-gray-300">Devoted to the love for <span class="text-yellow-400 font-medium">Hindi literature</span>, our goal is to inspire and support the next generation of writers, poets, and storytellers by bringing together both newcomers and stalwarts.</p>
+                </div>
+    
+                <!-- Aao Kahani Baatein -->
+                <div x-data="{ 
+                    currentSlide: 0, 
+                    totalSlides: 2,
+                    nextSlide() { this.currentSlide = (this.currentSlide + 1) % this.totalSlides; },
+                    prevSlide() { this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides; }
+                }" class="bg-gray-800 rounded-lg p-6 text-center">
+                    <h3 class="text-2xl font-bold text-white mb-4">Aao Kahani Baatein</h3>
+                    <div class="relative overflow-hidden mb-4 h-64">
+                        <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${currentSlide * 100}%)`">
+                            <img src="Photos/Aao Kahani Baatein/IMG_20220825_104516.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Kahani 1">
+                            <img src="Photos/Aao Kahani Baatein/WhatsApp Image 2025-01-29 at 00.23.21_f8e7eec9.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Kahani 2">
+                        </div>
+                        <button @click="prevSlide" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">&#10094;</button>
+                        <button @click="nextSlide" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">&#10095;</button>
+                    </div>
+                    <p class="text-gray-300">We believe that <span class="text-yellow-400 font-medium">emotional intelligence</span> is crucial for personal and societal well-being. Through <span class="text-yellow-400 font-medium">stories and interactive sessions</span>, we help students develop skills to understand and manage emotions, fostering healthier relationships and communities.</p>
+                </div>
+    
+                <!-- Project Saath -->
+                <div x-data="{ 
+                    currentSlide: 0, 
+                    totalSlides: 3,
+                    nextSlide() { this.currentSlide = (this.currentSlide + 1) % this.totalSlides; },
+                    prevSlide() { this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides; }
+                }" class="bg-gray-800 rounded-lg p-6 text-center">
+                    <h3 class="text-2xl font-bold text-white mb-4">Project Saath</h3>
+                    <div class="relative overflow-hidden mb-4 h-64">
+                        <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${currentSlide * 100}%)`">
+                            <img src="Photos/Project Saath/WhatsApp Image 2024-12-02 at 18.15.18_33ac8e56.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Saath 1">
+                            <img src="Photos/Project Saath/WhatsApp Image 2025-01-29 at 00.27.01_1d0b5f50.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Saath 2">
+                            <img src="Photos/Project Saath/WhatsApp Image 2025-01-29 at 00.27.01_cfbf31eb.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Saath 3">
+                        </div>
+                        <button @click="prevSlide" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">&#10094;</button>
+                        <button @click="nextSlide" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">&#10095;</button>
+                    </div>
+                    <p class="text-gray-300"><span class="text-yellow-400 font-medium">Empowerment of women</span> is at the heart of our foundation. We offer support, resources, and training to help women achieve <span class="text-yellow-400 font-medium">economic independence</span>, personal growth, and leadership skills.</p>
+                </div>
+                
+                <!-- Beyond Books -->
+                <div x-data="{ 
+                    currentSlide: 0, 
+                    totalSlides: 3,
+                    nextSlide() { this.currentSlide = (this.currentSlide + 1) % this.totalSlides; },
+                    prevSlide() { this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides; }
+                }" class="bg-gray-800 rounded-lg p-6 text-center md:ml-36 w-full max-w-[400px]">
+         
+                    <h3 class="text-2xl font-bold text-white mb-4">Beyond Books</h3>
+                    <div class="relative overflow-hidden mb-4 h-64">
+                        <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${currentSlide * 100}%)`">
+                            <img src="Photos/Beyond Books/IMG-20241123-WA0030.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Beyond Books 1">
+                            <img src="Photos/Beyond Books/WhatsApp Image 2025-01-29 at 00.11.03_52d4688f.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Beyond Books 2">
+                            <img src="Photos/Beyond Books/WhatsApp Image 2025-01-29 at 00.11.04_5ee93b49.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Beyond Books 3">
+                        </div>
+                        <button @click="prevSlide" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">&#10094;</button>
+                        <button @click="nextSlide" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">&#10095;</button>
+                    </div>
+                    <p class="text-gray-300">A project dedicated to promoting <span class="text-yellow-400 font-medium">critical thinking</span>, knowledge-sharing, and education beyond traditional learning methods. We foster a love for learning through workshops, book discussions, and creative activities.</p>
+                </div>
+    
+                <!-- Samanta --> 
+                <div x-data="{ 
+                    currentSlide: 0, 
+                    totalSlides: 4,
+                    nextSlide() { this.currentSlide = (this.currentSlide + 1) % this.totalSlides; },
+                    prevSlide() { this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides; }
+                }" class="bg-gray-800 rounded-lg p-6 text-center md:ml-36 w-full max-w-[400px]">
+                    <h3 class="text-2xl font-bold text-white mb-4">Samanta</h3>
+                    <div class="relative overflow-hidden mb-4 h-64">
+                        <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${currentSlide * 100}%)`">
+                            <img src="Photos/Samanta/85098386_2796853070402001_8805346653801283584_n.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Samanta 1">
+                            <img src="Photos/Samanta/86728069_2796849930402315_1113137630565892096_n.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Samanta 2">
+                            <img src="Photos/Samanta/WhatsApp Image 2025-01-28 at 23.14.35_871f1172.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Samanta 3">
+                            <img src="Photos/Samanta/WhatsApp Image 2025-01-28 at 23.14.35_c26aeee7.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="Samanta 4">
+                        </div>
+                        <button @click="prevSlide" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">&#10094;</button>
+                        <button @click="nextSlide" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">&#10095;</button>
+                    </div>
+                    <p class="text-gray-300">Focused on <span class="text-yellow-400 font-medium">gender equality</span> and inclusivity, this program works towards breaking stereotypes and promoting equal opportunities for all, regardless of gender identity and background.</p>
+                </div>
+            </div>
+        </section>
+        <section class="bg-yellow-400 py-16 flex justify-center items-center">
+            <div class="w-full max-w-6xl px-4">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">A Little Glimpse of our World</h3>
+                    <p class="text-lg text-gray-800 max-w-3xl mx-auto">
+                        Our aim is to inspire, empower, and create a positive impact in our community through our diverse programs and initiatives. Join us in making a difference.
+                    </p>
+                </div>
+                <div class="video-container rounded-lg shadow-lg overflow-hidden">
+                    <iframe 
+                        src="https://www.youtube.com/embed/wD808dGIHNQ"
+                        title="A Little Glimpse of our World"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <style>
+            .video-container {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 aspect ratio */
+                height: 0;
+                overflow: hidden;
+            }
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <section id="gallery">
+            <h2 class = "text-white">Gallery</h2>
+            <div class="relative w-full overflow-hidden">
+                <div class="flex animate-slide">
+                    <img src="images/slide1.jpg" class="w-1/4" alt="Slide 1">
+                    <img src="images/slide2.jpg" class="w-1/4" alt="Slide 2">
+                    <img src="images/slide3.jpg" class="w-1/4" alt="Slide 3">
+                    <img src="images/slide1.jpg" class="w-1/4" alt="Slide 1">
+                    <img src="images/slide2.jpg" class="w-1/4" alt="Slide 2">
+                    <img src="images/slide3.jpg" class="w-1/4" alt="Slide 3">
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="bg-yellow-400 py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Team</h2>
+                
+                <!-- Scrollable container -->
+                <div class="relative">
+                    <div class="overflow-x-auto">
+                        <div class="flex gap-8 pb-4">
+                            <!-- Team Member 1 -->
+                            <div class="flex-none w-64 text-center team">
+                                <img class="object-cover object-center w-full h-48 mx-auto rounded-lg shadow-lg" 
+                                     src="https://scontent.flko13-1.fna.fbcdn.net/v/t39.30808-6/305156682_511946730930452_4207858596476693153_n.jpg" 
+                                     alt="Sarita Nirjhra" />
+                                <div class="mt-2">
+                                    <h3 class="text-lg font-bold text-gray-900">Sarita "Nirjhra"</h3>
+                                    <span class="mt-1 font-semibold text-gray-800">CEO</span>
+                                </div>
+                            </div>
+        
+                            <!-- Team Member 2 -->
+                            <div class="flex-none w-64 text-center team">
+                                <img class="object-cover object-center w-full h-48 mx-auto rounded-lg shadow-lg" 
+                                     src="https://pbs.twimg.com/profile_images/1406821373457039360/TJCu6wUD_400x400.jpg" 
+                                     alt="Baasab Taalib" />
+                                <div class="mt-2">
+                                    <h3 class="text-lg font-bold text-gray-900">Baasab "Taalib"</h3>
+                                    <span class="mt-1 font-semibold text-gray-800">Co-founder</span>
+                                </div>
+                            </div>
+        
+                            <!-- Team Member 3 -->
+                            <div class="flex-none w-64 text-center team">
+                                <img class="object-cover object-center w-full h-48 mx-auto rounded-lg shadow-lg" 
+                                     src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce" 
+                                     alt="Capt. Ajay Pandey" />
+                                <div class="mt-2">
+                                    <h3 class="text-lg font-bold text-gray-900">Capt. Ajay Pandey</h3>
+                                    <span class="mt-1 font-semibold text-gray-800">UI/UX</span>
+                                </div>
+                            </div>
+        
+                            <!-- Team Member 4 -->
+                            <div class="flex-none w-64 text-center team">
+                                <img class="object-cover object-center w-full h-48 mx-auto rounded-lg shadow-lg" 
+                                     src="https://images.unsplash.com/photo-1517841905240-472988babdf9" 
+                                     alt="Kiran Shukla" />
+                                <div class="mt-2">
+                                    <h3 class="text-lg font-bold text-gray-900">Kiran Shukla</h3>
+                                    <span class="mt-1 font-semibold text-gray-800">Software Engineer</span>
+                                </div>
+                            </div>
+        
+                            <!-- New Team Member 1 -->
+                            <div class="flex-none w-64 text-center team">
+                                <img class="object-cover object-center w-full h-48 mx-auto rounded-lg shadow-lg" 
+                                     src="https://images.unsplash.com/photo-1603415526960-f12f55b1805d" 
+                                     alt="Rahul Kapoor" />
+                                <div class="mt-2">
+                                    <h3 class="text-lg font-bold text-gray-900">Rahul Kapoor</h3>
+                                    <span class="mt-1 font-semibold text-gray-800">Project Manager</span>
+                                </div>
+                            </div>
+        
+                            <!-- New Team Member 2 -->
+                            <div class="flex-none w-64 text-center team">
+                                <img class="object-cover object-center w-full h-48 mx-auto rounded-lg shadow-lg" 
+                                     src="https://images.unsplash.com/photo-1622473591925-724eab1b8cf6" 
+                                     alt="Aditi Mehra" />
+                                <div class="mt-2">
+                                    <h3 class="text-lg font-bold text-gray-900">Aditi Mehra</h3>
+                                    <span class="mt-1 font-semibold text-gray-800">Marketing Lead</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Scroll indicators -->
+                    <div style="display: none;" class="absolute left-0 top-1/2 -translate-y-1/2 w-8 bg-gradient-to-r from-yellow-400 to-transparent h-full pointer-events-none"></div>
+                    <div style="display: none;" class="absolute right-0 top-1/2 -translate-y-1/2 w-8 bg-gradient-to-l from-yellow-400 to-transparent h-full pointer-events-none"></div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <section id="contact-section">
+            <form id="contactForm" action="contact.php" method="POST">
+                <h2>Contact Us</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+        
+                <button type="submit">Send</button>
+            </form>
+        
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.8831901084944!2d-122.4194156846813!3d37.7749297797598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f04389d1%3A0x51b41ed1e5b84b9b!2sNGO!5e0!3m2!1sen!2sus!4v1616819781445!5m2!1sen!2sus"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Manthan Foundation. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        new Splide( '#image-carousel',{
+            type: 'loop',
+            perPage: 1,
+            rewind: false,
+            autoplay: true,
+            interval: 2800,
+        } ).mount();
+      </script>
+
+<script>
+    function nextSlide(id) {
+        const container = document.getElementById(id);
+        if (container) container.scrollLeft += container.clientWidth;
+    }
+
+    function prevSlide(id) {
+        const container = document.getElementById(id);
+        if (container) container.scrollLeft -= container.clientWidth;
+    }
+</script>
+</body>
+</html>
